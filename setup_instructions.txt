@@ -1,0 +1,55 @@
+============================================
+SINHALA CHATBOT - QUICK SETUP GUIDE
+============================================
+
+STEP 1: Install OLLAMA (One time, needs internet)
+------------------------------------------------
+Windows/Mac: Download from https://ollama.ai/download
+Linux: Run this command in terminal:
+curl -fsSL https://ollama.ai/install.sh | sh
+
+STEP 2: Download the Model (One time, needs internet)
+----------------------------------------------------
+Open terminal and run:
+ollama pull llama2
+
+Wait for download to complete (about 3.7GB)
+
+STEP 3: Start OLLAMA (Keep this terminal open)
+-----------------------------------------------
+ollama serve
+
+STEP 4: Install Python Packages (One time)
+------------------------------------------
+Open new terminal and run:
+pip install streamlit ollama
+
+STEP 5: Run the Chatbot (After completing steps 1-4)
+---------------------------------------------------
+streamlit run app.py
+
+Your browser will open automatically at http://localhost:8501
+
+============================================
+TESTING OFFLINE MODE
+============================================
+1. Disable Wi-Fi / Unplug ethernet cable
+2. Refresh the browser
+3. Chatbot should work normally
+4. No internet required after initial setup
+
+============================================
+TROUBLESHOOTING
+============================================
+
+Error: "OLLAMA not running"
+Solution: Run 'ollama serve' in terminal
+
+Error: "Model not found"
+Solution: Run 'ollama pull llama2' in terminal
+
+Error: "Port 8501 already in use"
+Solution: Run 'streamlit run app.py --server.port 8502'
+
+Error: Sinhala not showing properly
+Solution: Your browser should support Unicode (Chrome/Firefox/Safari)
